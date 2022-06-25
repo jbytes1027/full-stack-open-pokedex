@@ -10,5 +10,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: say hi
-        run: |
-          echo 'Hi'
+        run: "echo 'Hi'"
+      - name: record date
+        run: 'date'
+      - name: print dir
+        run: 'ls -l'
