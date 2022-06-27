@@ -23,4 +23,4 @@ jobs:
           HEAD_COMMIT_MESSAGE: ${{ toJson(github.event.commits.head_commit.message) }}
         run: |
           echo "$HEAD_COMMIT_MESSAGE"
-          echo "${{contains(HEAD_COMMIT_MESSAGE, '#skip')}}"
+          echo "${{contains($HEAD_COMMIT_MESSAGE, '#skip')}}"
