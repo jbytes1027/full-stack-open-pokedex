@@ -20,4 +20,5 @@ jobs:
         run: echo "$COMMITS"
       - name: commit message
         run: |
+          echo "$github.event.commits.head_commit.message"
           echo "${{contains(github.event.commits.head_commit.message, '#skip')}}"
