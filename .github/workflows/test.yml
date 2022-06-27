@@ -22,5 +22,5 @@ jobs:
         env:
           MSG: ${{ toJson(github.event.head_commit.message) }}
         run: |
-          echo "$MSG"
+          echo $MSG
           echo "${{contains(github.event.head_commit.message, '#skip')}}"
